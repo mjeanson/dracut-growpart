@@ -1,0 +1,5 @@
+#!/bin/bash
+
+dracut_install growpart awk sfdisk e2fsck resize2fs partprobe
+
+inst_hook pre-mount 30 "$moddir/growpart.sh"
